@@ -15,7 +15,7 @@
                     <field name="barcode"
                            attrs="{'readonly': [('generate_type', '=', 'sequence')]}" />
                     <field name="barcode_rule_id"
-                           domain="[('generate_model', '=', 'res.partner')]"
+                           domain="[('generate_model', '=', 'product.packaging')]"
                            groups="barcodes_generator_abstract.generate_barcode"
                            colspan="2" />
                     <field name="generate_type" invisible="1" />

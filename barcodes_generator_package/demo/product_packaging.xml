@@ -6,7 +6,7 @@
 
 <odoo>
 
-    <record id="product_packaging_barcode" model="res.partner">
+    <record id="product_packaging_barcode" model="product.packaging">
         <field name="name">Packaging with Generated Barcode</field>
         <field name="barcode_rule_id" ref="product_packaging_generated_barcode" />
     </record>
