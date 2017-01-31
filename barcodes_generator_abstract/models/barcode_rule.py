@@ -79,7 +79,7 @@ class BarcodeRule(models.Model):
                 ('generate_model', '=', record.generate_model),
                 ('generate_automate', '=', True),
             ]
-            if len(self.search[domain]) > 1:
+            if len(self.search(domain)) > 1:
                 raise exceptions.ValidationError(_(
                     'Only one rule per model can be used for automatic '
                     'barcode generation.'
@@ -121,7 +121,7 @@ class BarcodeRule(models.Model):
         Returns:
             BarcodeRule: Recordset of automated barcode rules for model.
         """
-        return self.env['barode.rule'].search([
+        return self.search([
             ('generate_model', '=', model),
             ('generate_automate', '=', True),
         ])
